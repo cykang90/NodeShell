@@ -6,8 +6,9 @@
 //   process.stdout.write('\nprompt > ')
 // })
 
-// const pwd = require('./pwd')
-// pwd()
+module.exports = function() {
+  const cmd = process.cwd()
 
-const ls = require('./ls')
-const fs = require('fs')
+  process.stdout.write('You typed: ' + cmd)
+  process.stdout.write('\nprompt > ')
+}
